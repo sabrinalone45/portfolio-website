@@ -21,11 +21,13 @@ canvas {
 h1 {
     font-family: 'BeVietnam-Regular';
     font-size: 35px;
-    color: white;
     position: absolute;
-    top: 40%; 
+    top: 43.5%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+    background: linear-gradient(to right, hsl(0, 0%, 100%), hwb(338 59% 0%)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 h2, h3 {
     font-family: 'BeVietnam-Regular';
@@ -38,11 +40,21 @@ h2, h3 {
     left: 50%; 
     transform: translate(-50%, -50%);
 }
-
+h4 {
+    font-family: 'BeVietnam-Regular';
+    font-size: 17px;
+    position: absolute;
+    top: 80%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, hwb(338 59% 0%), hsl(0, 0%, 100%)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 #social-media {
     position: absolute;
-    top: calc(50% + 50px); 
+    top: calc(50% + 34px); 
     left: 50%;
     transform: translateX(-50%);
 }
@@ -57,7 +69,7 @@ h2, h3 {
     height: 50px;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-    box-shadow: 0 0 10px #ff9bc8;  
+    box-shadow: 0 0 0px #ff9bc8;  
 }
 
 #social-media img:hover {
