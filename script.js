@@ -64,4 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     typeWriter(h1Element, "Sabrina Lone", 100, function() {
         typeH2AndH3();
     });
+    const h4Element = document.querySelector("h4");
+    typeWriter(h4Element, "Welcome!", 100, function() {
+    });
 });
