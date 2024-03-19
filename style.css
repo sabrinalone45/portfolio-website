@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     overflow: hidden;
-    background-color: black; /* Ensure the background color remains black */
+    background-color: black; 
 }
 
 canvas {
@@ -49,19 +49,17 @@ h4 {
     font-size: 17px;
     position: absolute;
     top: 80%;
-    left: 47.5%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(to right, hwb(338 59% 0%), hsl(0, 0%, 100%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer; 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-    transform: translateX(-10%);
 }
 
 h4:hover {
-    transform: scale(1.2);
+    transform: translateX(-50%) scale(1.2); 
     text-shadow: 0 0 20px #ffadd0;
 }
 
@@ -90,51 +88,108 @@ h4:hover {
     box-shadow: 0 0 20px #ffadd0;
 }
 
-#homeButton {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(to right, hsl(0, 0%, 100%), hwb(338 59% 0%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 25px;
-    top: 310px;
-    left: 576px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-    transform: translateX(-50%);
-}
-
-#homeButton:hover {
-    transform: scale(1.2);
-    text-shadow: 0 0 20px #ffadd0;
-}
-
-#aboutMe {
-    position: absolute;
-    font-size: 25px;
-    top: 375px;
-    left: 576px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-    transform: translateX(-50%);
-}
-
-#aboutMe:hover {
-    transform: scale(1.2);
-    text-shadow: 0 0 20px #ffadd0;
-}
-
+#homeButton,
+#aboutMe,
 #projectsMe {
     position: absolute;
     font-size: 25px;
-    top: 440px;
-    left: 576px;
+    left: 50%; 
+    transform: translateX(-50%); 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    transform: translateX(-50%);
 }
 
+#homeButton {
+    top: 310px;
+    background: linear-gradient(to right, hwb(338 59% 0%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#aboutMe {
+    top: 375px;
+}
+
+#projectsMe {
+    top: 440px;
+}
+
+#homeButton:hover,
+#aboutMe:hover,
 #projectsMe:hover {
-    transform: scale(1.2);
+    transform: translateX(-50%) scale(1.2); 
     text-shadow: 0 0 20px #ffadd0;
+}
+@keyframes fadeInAndSlideIn {
+    0% {
+        opacity: 0;
+        transform: translate(-1px)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#infoScreen #homeButton,
+#infoScreen #aboutMe,
+#infoScreen #projectsMe {
+    opacity: 0; 
+    animation: fadeInAndSlideIn 0.5s ease-in-out forwards;
+}
+#topButtons {
+    position: absolute;
+    top: 23px;
+    left: 74.5%;
+    transform: translateX(-50%);
+    display: flex; 
+    justify-content: center; 
+}
+
+.topButton {
+    font-family: 'BeVietnam-Regular';
+    font-size: 17px;
+    margin: 0 20px; 
+    cursor: pointer;
+    position: relative; 
+}
+
+#aboutMeTop {
+    left: 162px;
+    background: linear-gradient(to right, hwb(0 100% 0%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+#homeButtonTop {
+    background: linear-gradient(to right, hwb(0 100% 0%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+#projectsMeTop {
+    background: linear-gradient(to right, hwb(0 100% 0%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.topButton.active::after,
+.topButton:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: #ff9bc8;
+}
+
+#homeButtonTop.active,
+#aboutMeTop.active,
+#projectsMeTop.active {
+    background: linear-gradient(to right, hwb(0 100% 0%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
