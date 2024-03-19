@@ -65,43 +65,77 @@ document.addEventListener("DOMContentLoaded", function() {
         typeH2AndH3();
     });
     const h4Element = document.querySelector("h4");
-    typeWriter(h4Element, "Click me!", 100, function() {
+    typeWriter(h4Element, "Click me to learn more!", 100, function() {
     });
 
     const clickMeElement = document.getElementById("h4typing");
+    const homeButtonElement = document.getElementById("homeButtonTop");
     const homeScreen = document.getElementById("homeScreen");
     const infoScreen = document.getElementById("infoScreen");
+    const aboutMeScreen = document.getElementById("aboutMeScreen");
+    const projectsMeScreen = document.getElementById("projectsMeScreen");
 
     clickMeElement.addEventListener("click", function() {
         homeScreen.style.display = "none"; // hide home screen
         infoScreen.style.display = "block"; // info screen pops up
+        aboutMeScreen.style.display = "none"; // hide about me screen
+        projectsMeScreen.style.display = "none"; // hide projects me screen
     });
 
     const goBackElement = document.getElementById("homeButton");
+    homeButtonElement.addEventListener("click", showHomeScreen);
+    goBackElement.addEventListener("click", showHomeScreen);
 
-    goBackElement.addEventListener("click", function() {
+    function showHomeScreen() {
         homeScreen.style.display = "block"; // go back to home screen
         infoScreen.style.display = "none"; // hide info screen
-    });
+        aboutMeScreen.style.display = "none"; // hide about me screen
+        projectsMeScreen.style.display = "none"; // hide projects me screen
+    }
 
     const aboutMeElement = document.getElementById("aboutMe");
-    const aboutMeScreen = document.getElementById("aboutMeScreen");
+    const aboutMeTopButton = document.getElementById("aboutMeTop");
+
+    aboutMeTopButton.addEventListener("click", function() {
+        showAboutMeScreen();
+    });
 
     aboutMeElement.addEventListener("click", function() {
-        aboutMeScreen.style.display = "block"; // display the about me screen
-        homeScreen.style.display = "none"; // hide the home screen
-        infoScreen.style.display = "none"; // hide the info screen
+        showAboutMeScreen();
     });
+
+    function showAboutMeScreen() {
+        homeScreen.style.display = "none"; // hide home screen
+        infoScreen.style.display = "none"; // hide info screen
+        aboutMeScreen.style.display = "block"; // display about me screen
+        projectsMeScreen.style.display = "none"; // hide projects me screen
+    }
 
     const projectsMeElement = document.getElementById("projectsMe");
-    const projectsMeScreen = document.getElementById("projectsMeScreen");
+    const projectsMeTopButton = document.getElementById("projectsMeTop");
 
-    projectsMeElement.addEventListener("click", function() {
-        projectsMeScreen.style.display = "block";
-        aboutMeScreen.style.display = "none"; // hide the about me screen
-        homeScreen.style.display = "none"; // hide the home screen
-        infoScreen.style.display = "none"; // hide the info screen
-
+    projectsMeTopButton.addEventListener("click", function() {
+        showProjectsMeScreen();
     });
 
+    projectsMeElement.addEventListener("click", function() {
+        showProjectsMeScreen();
+    });
+
+    function showProjectsMeScreen() {
+        homeScreen.style.display = "none"; // hide home screen
+        infoScreen.style.display = "none"; // hide info screen
+        aboutMeScreen.style.display = "none"; // hide about me screen
+        projectsMeScreen.style.display = "block"; // display projects me screen
+    }
+
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const topButtons = document.querySelectorAll(".topButton");
+    topButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            topButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+        });
+    });
 });
