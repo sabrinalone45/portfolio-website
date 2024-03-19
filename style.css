@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    overflow: hidden; 
+    overflow: hidden;
+    background-color: black; /* Ensure the background color remains black */
 }
 
 canvas {
@@ -22,39 +23,51 @@ h1 {
     font-family: 'BeVietnam-Regular';
     font-size: 35px;
     position: absolute;
-    top: 43.5%; 
-    left: 50%; 
+    top: 43.5%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, hsl(0, 0%, 100%), hwb(338 59% 0%)); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-h2, h3 {
-    font-family: 'BeVietnam-Regular';
-    font-size: 25px;
-    color: white;
-    line-height: 1.5; 
-    white-space: nowrap; 
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-}
-h4 {
-    font-family: 'BeVietnam-Regular';
-    font-size: 17px;
-    position: absolute;
-    top: 80%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    background: linear-gradient(to right, hwb(338 59% 0%), hsl(0, 0%, 100%)); 
+    background: linear-gradient(to right, hsl(0, 0%, 100%), hwb(338 59% 0%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+h2,
+h3 {
+    font-family: 'BeVietnam-Regular';
+    font-size: 25px;
+    color: white;
+    line-height: 1.5;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h4 {
+    font-family: 'BeVietnam-Regular';
+    font-size: 17px;
+    position: absolute;
+    top: 80%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, hwb(338 59% 0%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translateX(-10%);
+}
+
+h4:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #ffadd0;
+}
+
 #social-media {
     position: absolute;
-    top: calc(50% + 34px); 
+    top: calc(50% + 34px);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -68,11 +81,60 @@ h4 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-    box-shadow: 0 0 0px #ff9bc8;  
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 0px #ff9bc8;
 }
 
 #social-media img:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 20px #ffadd0; 
+    box-shadow: 0 0 20px #ffadd0;
+}
+
+#homeButton {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, hsl(0, 0%, 100%), hwb(338 59% 0%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    top: 310px;
+    left: 576px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#homeButton:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #ffadd0;
+}
+
+#aboutMe {
+    position: absolute;
+    font-size: 25px;
+    top: 375px;
+    left: 576px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#aboutMe:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #ffadd0;
+}
+
+#projectsMe {
+    position: absolute;
+    font-size: 25px;
+    top: 440px;
+    left: 576px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#projectsMe:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #ffadd0;
 }

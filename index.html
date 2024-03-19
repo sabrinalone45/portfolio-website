@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
     <div id="container">
         <div id="content">
-            <div id="fade-in">
+            <div id="homeScreen">
                 <h1 id="h1typing" class="typing"></h1>
                 <h2 id="h2typing" class="typing"></h2>
-                <h3 id="h3typing" class="typing"></h3> 
-                <h4 id="h4typing" class="typing"></h4>
+                <h3 id="h3typing" class="typing"></h3>  
+                <h4 id="h4typing" class="typing" style="cursor: pointer;"></h4> 
                 <div id="social-media">
                     <a href="https://github.com/sabrinalone45"><img src="./img/githubicon.PNG" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/sabrina-lone-790a52276/"><img src="./img/linkedinicon.PNG" alt="LinkedIn"></a>
                 </div>
             </div>
+            <div id="infoScreen" style="display: none;">
+                <h2 id="homeButton" class="typing" style="cursor: pointer;">Home</h2>
+                <h3 id="aboutMe" class="typing" style="cursor: pointer;">About me</h3>
+                <h4 id="projectsMe" class="typing" style="cursor: pointer;">Projects</h4>
+                <p>info screen content.</p>
+            </div>
+        </div>
+        <div id="aboutMeScreen" style="display: none;">
+            <!-- more about me content will go here soon -->
+            <h1>About Me</h1>
+        </div>
+    </div>
+    <div id="projectsMeScreen" style="display: none;">
+            <!-- my side projects content -->
+            <h1>My projects</h1>
         </div>
     </div>
     <script src="script.js"></script> 

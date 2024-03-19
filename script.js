@@ -65,6 +65,43 @@ document.addEventListener("DOMContentLoaded", function() {
         typeH2AndH3();
     });
     const h4Element = document.querySelector("h4");
-    typeWriter(h4Element, "Welcome!", 100, function() {
+    typeWriter(h4Element, "Click me!", 100, function() {
     });
+
+    const clickMeElement = document.getElementById("h4typing");
+    const homeScreen = document.getElementById("homeScreen");
+    const infoScreen = document.getElementById("infoScreen");
+
+    clickMeElement.addEventListener("click", function() {
+        homeScreen.style.display = "none"; // hide home screen
+        infoScreen.style.display = "block"; // info screen pops up
+    });
+
+    const goBackElement = document.getElementById("homeButton");
+
+    goBackElement.addEventListener("click", function() {
+        homeScreen.style.display = "block"; // go back to home screen
+        infoScreen.style.display = "none"; // hide info screen
+    });
+
+    const aboutMeElement = document.getElementById("aboutMe");
+    const aboutMeScreen = document.getElementById("aboutMeScreen");
+
+    aboutMeElement.addEventListener("click", function() {
+        aboutMeScreen.style.display = "block"; // display the about me screen
+        homeScreen.style.display = "none"; // hide the home screen
+        infoScreen.style.display = "none"; // hide the info screen
+    });
+
+    const projectsMeElement = document.getElementById("projectsMe");
+    const projectsMeScreen = document.getElementById("projectsMeScreen");
+
+    projectsMeElement.addEventListener("click", function() {
+        projectsMeScreen.style.display = "block";
+        aboutMeScreen.style.display = "none"; // hide the about me screen
+        homeScreen.style.display = "none"; // hide the home screen
+        infoScreen.style.display = "none"; // hide the info screen
+
+    });
+
 });
