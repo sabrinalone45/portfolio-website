@@ -134,9 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const topButtons = document.querySelectorAll(".topButton");
     topButtons.forEach(button => {
         button.addEventListener("click", function() {
-            // Remove active class from all buttons
             topButtons.forEach(btn => btn.classList.remove("active"));
-            // Add active class to the clicked button
             button.classList.add("active");
         });
     });
