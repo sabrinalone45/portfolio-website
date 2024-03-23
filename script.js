@@ -240,3 +240,25 @@ document.addEventListener("DOMContentLoaded", function() {
     toolsButton.addEventListener("click", showToolsScreen);
 
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const skillsButton = document.getElementById("skillsButton");
+    const toolsButton = document.getElementById("toolsButton");
+    const skillContainers = document.querySelectorAll('.skill-container');
+    const toolContainers = document.querySelectorAll('.tool-container');
+
+    function showSkillsScreen() {
+        skillContainers.forEach(container => {
+            container.style.display = 'block';
+        });
+        toolContainers.forEach(container => {
+            container.style.display = 'none';
+        });
+        skillsButton.style.backgroundColor = "#ff9ee2"; 
+        toolsButton.style.backgroundColor = ""; 
+    }
+
+    showSkillsScreen();
+
+    skillsButton.addEventListener("click", showSkillsScreen);
+    toolsButton.addEventListener("click", showToolsScreen);
+});
