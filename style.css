@@ -158,7 +158,7 @@ h4:hover {
 }
 
 #aboutMeTop {
-    left: 229px;
+    left: 234px;
     background: linear-gradient(to right, hwb(0 100% 0%), hsl(0, 0%, 100%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -534,6 +534,19 @@ h4:hover {
     overflow-y: auto;
     height: 100vh;
 }
+
+::-webkit-scrollbar {
+    display: block; 
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, hwb(0 16% 84%), #ff357f);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff9bc8;  
+    border-radius: 10px; 
+}
 #contactMeScreen {
     display: none;
     position: absolute;
@@ -586,7 +599,7 @@ button:hover {
 #headingOne {
     color: white;
     top: -10%;
-    left: 21.6%;
+    left: 20.3%;
 }
 #headingOne:hover {
     color: #ff9ee2;
@@ -616,7 +629,7 @@ button:hover {
 footer {
     position: fixed;
     bottom: 0;
-    margin-left: -37%;
+    margin-left: -38.3%;
     width: 100%;
     color: white;
     background-color: transparent;
