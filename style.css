@@ -143,7 +143,7 @@ h4:hover {
 #topButtons {
     position: absolute;
     top: 23px;
-    left: 60%;
+    margin-left: 66%;
     transform: translateX(-50%);
     display: flex; 
     justify-content: center; 
@@ -158,7 +158,7 @@ h4:hover {
 }
 
 #aboutMeTop {
-    left: 233px;
+    left: 229px;
     background: linear-gradient(to right, hwb(0 100% 0%), hsl(0, 0%, 100%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -591,6 +591,10 @@ button:hover {
 #headingOne:hover {
     color: #ff9ee2;
 }
+#msg {
+    color: #00be00;
+    display: block;
+}
 #skillsButton {
     background-color: grey;
     margin-top: 22px;
@@ -609,6 +613,13 @@ button:hover {
 #toolsButton:hover {
     background-color: #ff9ee2;
 }
-footer p {
-    color: white; 
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: -37%;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    padding: 10px 0;
+    text-align: center;
 }
