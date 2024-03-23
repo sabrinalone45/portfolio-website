@@ -187,43 +187,6 @@ document.addEventListener("DOMContentLoaded", function() {
     showHomeScreen();
 });
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("contactForm");
-    const sendButton = document.getElementById("sendButton");
-
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); 
-
-  
-        const formData = new FormData(form);
-
-     
-        fetch(form.action, {
-            method: form.method,
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.text(); 
-            } else {
-                throw new Error("Failed to send message");
-            }
-        })
-        .then(data => {
-            if (data === "success") {
-                alert("Message sent successfully!");
-                form.reset(); 
-            } else {
-                throw new Error("Failed to send message");
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            alert("Failed to send message. Please try again later.");
-        });
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
     const skillsButton = document.getElementById("skillsButton");
     const toolsButton = document.getElementById("toolsButton");
     const nineBoxContainers = document.querySelectorAll(".skill-container");
