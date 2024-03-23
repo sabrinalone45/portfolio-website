@@ -23,6 +23,7 @@
                 <h2 id="homeButton" class="typing" style="cursor: pointer;">Home</h2>
                 <h3 id="aboutMe" class="typing" style="cursor: pointer;">About me</h3>
                 <h4 id="projectsMe" class="typing" style="cursor: pointer;">Projects</h4>
+                <h5 id="contactMe" class="typing" style="cursor: pointer;">Contact me</h5>
                 <p>info screen content.</p>
             </div>
         </div>
@@ -32,39 +33,48 @@
                     <p class="aboutMeHeading">About me</p>
                     <p class="aboutMeDetails">Hi! My name is Sabrina Lone. I currently live in Long Island, New York where I attend Hofstra University as an undergraduate sophomore
                         working towards a Bachelor of Science in Computer Science. I plan to graduate in 2026 and I have many plans to advance my coding knowledge and 
-                        make more coding projects. I am open to work and am very interested
-                        in back-end and front-end development regarding websites and softwares. Down below are all my skills!</p>
-            
-                    <div id="boxContainer">
-                        <div class="skill">JavaScript</div>
+                        make more coding projects. I am seeking internships and am very interested
+                        in back-end and front-end development. Check out my skills below by pressing
+                    one of the buttons.</p>
+                    <div id="skillsButtonScreen" class="button-screen"></div>
+                    <button id="skillsButton">Skills</button>
+                    <button id="toolsButton">Tools</button>
+                    <div class="skill-container">
+                        <div id="boxContainer">
+                            <div class="skill">JavaScript</div>
+                        </div>
+                        <div id="twoboxContainer">
+                            <div class="skill">HTML</div>
+                        </div>
+                        <div id="thirdboxContainer">
+                            <div class="skill">CSS</div>
+                        </div>
+                        <div id="fourboxContainer">
+                            <div class="skill">Python</div>
+                        </div>
+                        <div id="fiveboxContainer">
+                            <div class="skill">C++</div>
                     </div>
-                    <div id="twoboxContainer">
-                        <div class="skill">HTML</div>
-                    </div>
-                    <div id="thirdboxContainer">
-                        <div class="skill">CSS</div>
-                    </div>
-                    <div id="fourboxContainer">
-                        <div class="skill">Python</div>
-                    </div>
-                    <div id="fiveboxContainer">
-                        <div class="skill">C++</div>
-                    </div>
-                    <div id="sixboxContainer">
-                        <div class="skill">VS Code</div>
-                    </div>
-                    <div id="sevenboxContainer">
-                        <div class="skill">Linux</div>
-                    </div>
-                    <div id="eightboxContainer">
-                        <div class="skill">Eclipse</div>
-                    </div>
-                    <div id="nineboxContainer">
-                        <div class="skill">Adobe</div>
+                    <div id="toolsScreen" class="button-screen"></div>
+                    <div class="tool-container">
+                            <div id="sixboxContainer">
+                                <div class="skill">VS Code</div>
+                            </div>
+                            <div id="sevenboxContainer">
+                                <div class="skill">Linux</div>
+                            </div>
+                            <div id="eightboxContainer">
+                                <div class="skill">Eclipse</div>
+                            </div>
+                            <div id="nineboxContainer">
+                                <div class="skill">GitHub</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
         <div id="projectsMeScreen" style="display: none;">
             <div class="project-container">
                 <div id="projectsBoxContainer" class="project-details">
@@ -72,7 +82,7 @@
                     <p class="projectsMeHeading">Portfolio Website</p>
                     <p class="projectsMeDetails">My own personal portfolio. Developed with JavaScript, HTML, and CSS in Visual Studio Code.</p>
                 <div class="project-links">
-                    <a href="https://github.com/sabrinalone45/portfolio-website"><img src="./img/githubicon.PNG" style="width: 33px; height: auto;"></a>
+                    <a href="https://github.com/sabrinalone45/portfolio-website"><img src="./img/githubicon.png" style="width: 33px; height: auto;"></a>
                     <a href="https://sabrinalone45.github.io/portfolio-website/"><img src="./img/world.PNG" style="width: 33px; height: auto;"></a>
                 </div>
                 </div>
@@ -81,9 +91,9 @@
                 <div id="kittyBoxContainer" class="project-details">
                     <img src="./img/gamephoto.png">
                     <p class="projectsMeHeading">Hello Kitty Game</p>
-                    <p class="projectsMeDetails">A fun Super Mario Replica game featuring Hello Kitty characters. Developed using HTML5, Canvas, and JavaScript in Visual Studio Code. (In progress)</p>
+                    <p class="projectsMeDetails">A fun Super Mario Replica game featuring Hello Kitty characters. Developed using HTML5, Canvas, and JavaScript in Visual Studio Code. (In progress).</p>
                 <div class="project-links">
-                    <a href="https://github.com/sabrinalone45/hello-kitty-mario-replica/tree/main"><img src="./img/githubicon.PNG" style="width: 33px; height: auto;"></a>
+                    <a href="https://github.com/sabrinalone45/hello-kitty-mario-replica"><img src="./img/githubicon.png" style="width: 33px; height: auto;"></a>
                     <a href="https://sabrinalone45.github.io/hello-kitty-mario-replica/"><img src="./img/world.PNG" style="width: 33px; height: auto;"></a>
                 </div>
             </div>
@@ -93,7 +103,21 @@
         <h4 id="homeButtonTop" class="topButton typing" style="cursor: pointer;">Home</h4>
         <h4 id="aboutMeTop" class="topButton typing" style="cursor: pointer;">About Me</h4>
         <h4 id="projectsMeTop" class="topButton typing" style="cursor: pointer;">Projects</h4>
-    </div>      
+        <h4 id="contactMeTop" class="topButton typing" style="cursor: pointer;">Contact me</h4>
+    </div>    
+    <div id="contactMeScreen" style="display: none;">
+        <h2 id="headingOne">Write me a message!</h2>
+        <form id="contactForm" action="contact.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="sendButton">Send</button>
+        </form>
+    </div>  
+</div>   
+    <footer>
+        <p>&copy; 2024 Sabrina Lone. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script> 
 </body>
 </html>
