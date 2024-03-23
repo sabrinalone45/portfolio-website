@@ -139,3 +139,141 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    function showHomeScreen() {
+        document.getElementById("homeScreen").style.display = "block";
+        document.getElementById("infoScreen").style.display = "none";
+        document.getElementById("aboutMeScreen").style.display = "none";
+        document.getElementById("projectsMeScreen").style.display = "none";
+        document.getElementById("contactMeScreen").style.display = "none"; 
+    }
+
+    function showAboutMeScreen() {
+        document.getElementById("homeScreen").style.display = "none";
+        document.getElementById("infoScreen").style.display = "none";
+        document.getElementById("aboutMeScreen").style.display = "block";
+        document.getElementById("projectsMeScreen").style.display = "none";
+        document.getElementById("contactMeScreen").style.display = "none"; 
+    }
+
+    function showProjectsMeScreen() {
+        document.getElementById("homeScreen").style.display = "none";
+        document.getElementById("infoScreen").style.display = "none";
+        document.getElementById("aboutMeScreen").style.display = "none";
+        document.getElementById("projectsMeScreen").style.display = "block";
+        document.getElementById("contactMeScreen").style.display = "none"; 
+    }
+
+
+    function showContactMeScreen() {
+        document.getElementById("homeScreen").style.display = "none";
+        document.getElementById("infoScreen").style.display = "none";
+        document.getElementById("aboutMeScreen").style.display = "none";
+        document.getElementById("projectsMeScreen").style.display = "none";
+        document.getElementById("contactMeScreen").style.display = "block"; 
+    }
+
+
+    document.getElementById("homeButtonTop").addEventListener("click", showHomeScreen);
+    document.getElementById("aboutMeTop").addEventListener("click", showAboutMeScreen);
+    document.getElementById("projectsMeTop").addEventListener("click", showProjectsMeScreen);
+    document.getElementById("contactMeTop").addEventListener("click", showContactMeScreen);
+
+    document.getElementById("homeButton").addEventListener("click", showHomeScreen);
+    document.getElementById("aboutMe").addEventListener("click", showAboutMeScreen);
+    document.getElementById("projectsMe").addEventListener("click", showProjectsMeScreen);
+    document.getElementById("contactMe").addEventListener("click", showContactMeScreen);
+    
+    showHomeScreen();
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("contactForm");
+    const sendButton = document.getElementById("sendButton");
+
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+  
+        const formData = new FormData(form);
+
+     
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); 
+            } else {
+                throw new Error("Failed to send message");
+            }
+        })
+        .then(data => {
+            if (data === "success") {
+                alert("Message sent successfully!");
+                form.reset(); 
+            } else {
+                throw new Error("Failed to send message");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert("Failed to send message. Please try again later.");
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const skillsButton = document.getElementById("skillsButton");
+    const toolsButton = document.getElementById("toolsButton");
+    const nineBoxContainers = document.querySelectorAll(".skill-container");
+
+    nineBoxContainers.forEach(container => {
+        container.style.display = 'none';
+        
+    });
+
+    function showSkillsScreen() {
+        skillsButton.style.backgroundColor = "#ff9ee2"; 
+        toolsButton.style.backgroundColor = ""; 
+        nineBoxContainers.forEach(container => container.classList.add("active")); 
+    }
+
+    function showToolsScreen() {
+        toolsButton.style.backgroundColor = "#ff9ee2"; 
+        skillsButton.style.backgroundColor = ""; 
+        nineBoxContainers.forEach(container => container.classList.add("active")); 
+    }
+
+
+    skillsButton.addEventListener("click", showSkillsScreen);
+    toolsButton.addEventListener("click", showToolsScreen);
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const skillsButton = document.getElementById("skillsButton");
+    const toolsButton = document.getElementById("toolsButton");
+    const skillContainers = document.querySelectorAll('.skill-container');
+    const toolContainers = document.querySelectorAll('.tool-container');
+
+    function showSkillsScreen() {
+        skillContainers.forEach(container => {
+            container.style.display = 'block';
+        });
+        toolContainers.forEach(container => {
+            container.style.display = 'none';
+        });
+    } // creates the effect when skill button is pressed, elements pop up
+
+    function showToolsScreen() {
+        toolContainers.forEach(container => {
+            container.style.display = 'block'; 
+        });
+        document.getElementById("toolsScreen").style.display = "block"; 
+        document.getElementById("skillsScreen").style.display = "none";
+
+    }
+
+    skillsButton.addEventListener("click", showSkillsScreen);
+    toolsButton.addEventListener("click", showToolsScreen);
+
+});
