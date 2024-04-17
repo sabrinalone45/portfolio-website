@@ -534,19 +534,6 @@ h4:hover {
     overflow-y: auto;
     height: 100vh;
 }
-
-::-webkit-scrollbar {
-    display: block; 
-}
-
-::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, hwb(0 16% 84%), #ff357f);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #ff9bc8;  
-    border-radius: 10px; 
-}
 #contactMeScreen {
     display: none;
     position: absolute;
