@@ -1,4 +1,4 @@
-## Portfolio Website
+# Portfolio Website
 # Project Overview
 This is a personal portfolio website designed and developed to showcase my projects, skills, and experience. Built using HTML, CSS, and JavaScript, the site serves as a digital resume and project gallery for potential employers, collaborators, and anyone interested in my work.
 
