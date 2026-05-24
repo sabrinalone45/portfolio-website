@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // text content for h2 and h3
-    const h2Text = "Undergraduate software developer";
-    const h3Text = "Web developer";
+    const h2Text = "Welcome to my portfolio website!";
+    const h3Text = "Aspiring Data Analyst";
 
     // typing and untyping
     function typeWriter(element, text, speed, callback) {
